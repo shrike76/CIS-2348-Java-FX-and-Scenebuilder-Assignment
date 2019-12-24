@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <AnchorPane prefHeight="485.0" prefWidth="930.0">
+            <children>
+                <Button fx:id="update" layoutX="60.0" layoutY="16.0" mnemonicParsing="false" onAction="#toggleUpdatePane" text="Update" />
+                <Button fx:id="remove" layoutX="119.0" layoutY="16.0" mnemonicParsing="false" onAction="#toggleRemovePane" text="Remove" />
+                <Button layoutX="182.0" layoutY="16.0" mnemonicParsing="false" onAction="#printTotal" text="Print" />
+                <Pane id="addpane" fx:id="addPane" layoutX="17.0" layoutY="53.0" prefHeight="293.0" prefWidth="313.0" visible="false">
+                    <children>
+                        <Label layoutX="14.0" layoutY="47.0" prefHeight="17.0" prefWidth="59.0" text="Item Code" />
+                        <Label layoutX="14.0" layoutY="79.0" text="Item Name" />
+                        <Label layoutX="13.0" layoutY="113.0" text="Brand" />
+                        <Label layoutX="13.0" layoutY="149.0" text="Quantity" />
+                        <Label layoutX="15.0" layoutY="181.0" prefHeight="17.0" prefWidth="28.0" text="Price" />
+                        <Label layoutX="13.0" layoutY="217.0" text="Discounted Amount" />
+                        <TextField fx:id="itemCode" layoutX="151.0" layoutY="43.0" />
+                        <TextField fx:id="itemName" layoutX="151.0" layoutY="75.0" />
+                        <TextField fx:id="brand" layoutX="151.0" layoutY="109.0" />
+                        <TextField fx:id="quantity" layoutX="151.0" layoutY="145.0" />
+                        <TextField fx:id="price" layoutX="151.0" layoutY="177.0" />
+                        <TextField fx:id="discountedAmount" layoutX="151.0" layoutY="213.0" />
+                        <Button fx:id="addItemButton" layoutX="9.0" layoutY="261.0" mnemonicParsing="false" onAction="#addItem" text="Add" />
+                        <ComboBox fx:id="categoryselection" layoutX="150.0" layoutY="11.0" prefWidth="150.0" />
+                        <Label layoutX="14.0" layoutY="15.0" prefHeight="17.0" prefWidth="59.0" text="Category" />
+                        <Button fx:id="updateItemButton" layoutX="54.0" layoutY="261.0" mnemonicParsing="false" onAction="#updateItem" text="Update" />
+                    </children>
+                </Pane>
+                <Button fx:id="add" layoutX="17.0" layoutY="16.0" mnemonicParsing="false" onAction="#toggleAddPane" text="Add" />
+                <Label fx:id="receiptLabel" alignment="TOP_LEFT" layoutX="361.0" layoutY="19.0" prefHeight="418.0" prefWidth="547.0" />
+                <Pane fx:id="removePane" layoutX="17.0" layoutY="53.0" prefHeight="99.0" prefWidth="313.0" visible="false">
+                    <children>
+                        <TextField fx:id="removeItemCode" layoutX="114.0" layoutY="14.0" />
+                        <Label layoutX="26.0" layoutY="18.0" text="Item Code" />
+                        <Button layoutX="26.0" layoutY="61.0" mnemonicParsing="false" onAction="#removeItem" text="Remove" />
+                    </children></Pane>
+                <Pane fx:id="updatePane" layoutX="27.0" layoutY="63.0" prefHeight="99.0" prefWidth="313.0" visible="false">
+                    <children>
+                        <TextField fx:id="updateItemCode" layoutX="114.0" layoutY="14.0" />
+                        <Label layoutX="26.0" layoutY="18.0" text="Item Code" />
+                        <Button layoutX="26.0" layoutY="61.0" mnemonicParsing="false" onAction="#updatePopulateItem" text="Update" />
+                    </children>
+                </Pane>
+                <Label fx:id="printTotal" layoutX="348.0" layoutY="446.0" prefHeight="17.0" prefWidth="559.0" />
+                <CheckBox fx:id="saleDay" layoutX="241.0" layoutY="20.0" mnemonicParsing="false" text="Sale Day" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
